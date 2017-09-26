@@ -8,11 +8,5 @@ pipeline {
 
       }
     }
-
-    post {
-      always {
-        archiveArtifacts artifacts: "value" 'dist/*.jar', fingerprint: true
-      }
-    }
   }
 }
