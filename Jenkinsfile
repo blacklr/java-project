@@ -5,8 +5,12 @@ pipeline {
     stage('build') {
       steps {
         sh 'ant -f build.xml -v'
-// adding test comment. Adding another
       }
+    }
+  }
+  post {
+    always {
+      archive 'dist/*.jar'
     }
   }
 }
